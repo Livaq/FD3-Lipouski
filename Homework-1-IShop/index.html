@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Голосование</title>
+</head>
+<body>
+<div id="container"></div>
+
+<script src="https://unpkg.com/react@15/dist/react.js"></script>
+<script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
+
+<script src="IShop.js"></script>
+<link rel="stylesheet" type="text/css" href="IShop.css"/>
+
+<script>
+
+    let shopName = 'Магазин музыкальных инструментов';
+    let shopItems = [
+        {
+            itemName: 'Скрипка',
+            code: 1,
+            itemPrice: '1500$',
+            imgURL: "https://www.thomann.de/gb/thomann_student_violinset_4_4.htm",
+            inStock: 1
+        },
+        {
+            itemName: 'Электрогитара',
+            code: 2,
+            itemPrice: '900$',
+            imgURL: "https://www.thomann.de/gb/prs_s2_vela_semi_hollow_fgm.htm",
+            inStock: 6
+        },
+        {
+            itemName: 'Акустическая гитара',
+            code: 3,
+            itemPrice: '600$',
+            imgURL: "https://www.thomann.de/gb/fender_newporter_special_mbk_w_bag.htm",
+            inStock: 2
+        },
+        {
+            itemName: 'Укулеле',
+            code: 4,
+            itemPrice: '700$',
+            imgURL: "https://www.thomann.de/gb/kai_kti_5000.htm",
+            inStock: 3
+        },
+    ];
+
+    ReactDOM.render(
+        React.createElement(IShop, {shopName: shopName, shopItems: shopItems}),
+        document.getElementById('container')
+    );
+
+</script>
+
+</body>
+</html>
