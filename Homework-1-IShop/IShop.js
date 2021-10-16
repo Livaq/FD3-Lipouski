@@ -5,7 +5,7 @@
     render: function () {
 
         let shopItemsData = [];
-        shopItems.forEach((item) => {
+        this.props.shopItems.forEach((item) => {
             let itemDisplay =
                 React.DOM.div({key: item.code, className: 'IShop__shop-item_container'},
                     React.DOM.span({className: 'IShop__shop-item_container_item'}, item.itemName),
